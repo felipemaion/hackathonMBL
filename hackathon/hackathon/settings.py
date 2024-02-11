@@ -80,14 +80,7 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-#   "type": "postgres",
-#   "host": "silly.db.elephantsql.com",
-#   "port": 5432,
-#   "username": "rzojbgsw",
-#   "password": "pyyo3P8_lMOtxwYzJsP234BUYx4ovBs4",
-#   "database": "rzojbgsw",
-#   "entities": ["dist//*.entity{.ts,.js}"],
-#   "synchronize": true
+
         'default': {
         'ENGINE': env('DATABASE_ENGINE'),
         'NAME': env('DATABASE_NAME'),
