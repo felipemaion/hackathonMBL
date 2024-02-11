@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import environ
+env = environ.Env()
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t74od$9uf%_fj@x!-7a77gqixesv=50gm^&qh9mnvj4zub8k@l'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,12 +89,12 @@ DATABASES = {
 #   "entities": ["dist//*.entity{.ts,.js}"],
 #   "synchronize": true
         'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rzojbgsw',
-        'USER': 'rzojbgsw',
-        'PASSWORD': 'pyyo3P8_lMOtxwYzJsP234BUYx4ovBs4',
-        'HOST': 'silly.db.elephantsql.com',
-        'PORT': '5432',
+        'ENGINE': env('DATABASE_ENGINE'),
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT'),
     }
 }
 
