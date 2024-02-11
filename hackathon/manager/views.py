@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from rest_framework import generics
-from .models import Manager
-from .serializers import ManagerSerializer
+# from .models import Manager
+# from .serializers import ManagerSerializer
 
 
 def index(request):
@@ -10,8 +10,8 @@ def index(request):
 
 
 
-# Create your views here.
+# # Create your views here.
 class ManagerList(generics.ListCreateAPIView):
-
-    queryset = Manager.objects.all()
-    serializer_class = ManagerSerializer
+    pass
+    # queryset = Manager.objects.all()
+    # serializer_class = ManagerSerializer

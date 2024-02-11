@@ -1,9 +1,9 @@
-from rest_framework import serializers
-from .models import Manager
+# from rest_framework import serializers
+# # from .models import Manager
 
-class ManagerSerializer(serializers.ModelSerializer):
+# class ManagerSerializer(serializers.ModelSerializer):
 
-    class Meta:
+#     class Meta:
 
-        model = Manager
-        fields = '__all__'
+#         model = Manager
+#         fields = ['user_name', 'email']  
